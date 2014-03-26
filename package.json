@@ -1,0 +1,23 @@
+{
+  "name": "burst-node",
+  "description": "Node.js web framework",
+  "version": "0.0.1",
+  "author": "Antoine Pinsard <antoine.pinsard@gmail.com>",
+  "private": true,
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  },
+  "keywords": [
+    'burst',
+    'node',
+    'burst-node',
+    'web',
+    'framework',
+    'api',
+  ],
+  "repository": "git://github.com/apinsard/burst-node",
+  "license": "GPLv2"
+}

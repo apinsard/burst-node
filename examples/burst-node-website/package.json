@@ -1,0 +1,8 @@
+{
+  "name": "burst-node-website",
+  "description": "Burst-Node website",
+  "version": "0.0.1",
+  "private": true,
+  "dependancies": {
+  }
+}

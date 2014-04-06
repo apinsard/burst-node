@@ -1,7 +1,7 @@
 'use strict';
 
-//var burst = require('burst-node');
-//var models = burst.core.models;
+var burst = require('burst-node');
+var fields = burst.core.fields;
 
 var News = {
 
@@ -15,8 +15,8 @@ var News = {
     type: 'slug',
     max_length: 50,
     min_length: 6,
-    slugify: 'title',
-  }
+    empty: fields.slugify('title'),
+  },
 
   author: {
     type: 'text',
@@ -27,19 +27,29 @@ var News = {
 
   date: {
     type: 'date',
+    empty: fields.now(),
   },
 
   content: {
     type: 'text',
+    empty: null,
   },
 
   views: {
     type: 'integer',
     min: 0,
     max: 1e9,
-    initial: 0,
+    empty: 0,
   }
 
 };
 
+News.prototype.info = function News_info() {
+  var info = "By "+ this.author + " ";
+  info += "on "+ this.date +", ";
+  info += "viewed "+ this.views +" times.";
+  return info;
+};
+
 module.exports = News;
+

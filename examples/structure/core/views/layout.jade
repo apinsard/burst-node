@@ -1,0 +1,14 @@
+doctype html
+html(lang=page.lang)
+    head
+        meta(charset="UTF-8")
+        title= page.title
+        each style in page.styles
+            link(rel="stylesheet", type=style.type, href=style.href, media=style.media)
+        each script in page.scripts
+            script(type=script.type, src=script.src, async=(script.async? true: undefined), defer=(script.defer? true: undefined))
+    body
+        header
+        main
+            block content
+        footer

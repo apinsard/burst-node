@@ -1,17 +1,13 @@
 'use strict';
 
-//var burst = require('burst-node');
-//var controls = burst.core.controls;
-var News = require('../models/News');
-
 /**
  * Home - Home page controller
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * The constructor, defined by Burst-Node core, inits two instance attributes:
- *  - req <BurstRequest>  : a burst wrapper for `HttpRequest`
- *  - res <BurstResponse> : a burst wrapper for `HttpResponse`
+ *  - req <BurstRequest>  : a burst wrapper for `http.ClientRequest`
+ *  - res <BurstResponse> : a burst wrapper for `http.serverResponse`
  */
-var Home = {};
+var Home = function Core_Home() {};
 
 /**
  * Prerender - Executed before page rendering
@@ -19,16 +15,7 @@ var Home = {};
  * Proceed only actions required for page rendering.
  */
 Home.prototype.prerender = function Home_prerender() {
-  var news = new News({
-    title: 'News example',
-    author: 'John Doe',
-    content: "Foobar is a foo to make Barfoo fooing like a bar.",
-  });
-
-  news.views++;
-
-  this.res.setTitle('Home page');
-  this.res.send('news', news);
+  console.log('Home prerendering');
 };
 
 /**

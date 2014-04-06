@@ -11,12 +11,12 @@
 
   },
   "keywords": [
-    'burst',
-    'node',
-    'burst-node',
-    'web',
-    'framework',
-    'api',
+    "burst",
+    "node",
+    "burst-node",
+    "web",
+    "framework",
+    "api"
   ],
   "repository": "git://github.com/apinsard/burst-node",
   "license": "GPLv2"
